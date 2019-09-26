@@ -1,6 +1,10 @@
 import requests 
 
 
+
+def generate_grid():
+    print("Q F M R K L I T P")
+
 def request_word(user_word):
     URL = "https://wagon-dictionary.herokuapp.com/%s" %(user_word)
     # PARAMS = {'address':location} 
@@ -10,4 +14,4 @@ def request_word(user_word):
 
 
 
-request_word("dog")
+# request_word("dog")
