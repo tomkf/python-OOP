@@ -14,16 +14,24 @@ def request_word(user_word, user_gird):
     # PARAMS = {'address':location} 
     r = requests.get(url = URL) 
     data = r.json() 
+
     compare_grid = list(user_word.upper())
-    final_statement = True
+
+    exist_in_list = True
+    final_statement = False
 
     for item in compare_grid:
         statement = False
         if item in user_gird:
             statement = True
         if statement == False:
-            final_statement = False
-    
+            exist_in_list = False
+
+    if exist_in_list == True and data['found'] == True:
+        final_statement = True
+
     print(final_statement)
+
+    
 
 # def interpret_results(user_dict):
