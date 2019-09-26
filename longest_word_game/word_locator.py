@@ -20,7 +20,6 @@ def request_word(user_word, user_gird):
     Returns a "final statement" to be parsed
     """
     URL = "https://wagon-dictionary.herokuapp.com/%s" %(user_word)
-    # PARAMS = {'address':location} 
     r = requests.get(url = URL) 
     data = r.json() 
 
