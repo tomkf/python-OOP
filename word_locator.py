@@ -1,6 +1,10 @@
 import requests 
 import string
 import random
+# from timeit import default_timer as timer
+# from datetime import timedelta
+
+
 
 def generate_grid():
     grid = []
@@ -18,7 +22,7 @@ def request_word(user_word, user_gird):
     compare_grid = list(user_word.upper())
 
     exist_in_list = True
-    final_statement = False
+    final_statement = "Try Again"
 
     for item in compare_grid:
         statement = False
@@ -28,10 +32,16 @@ def request_word(user_word, user_gird):
             exist_in_list = False
 
     if exist_in_list == True and data['found'] == True:
-        final_statement = True
+        final_statement = "Well Done!"
 
-    print(final_statement)
+#     user_dic = { 'word': user_word,
+#     'pass': final_statement,
+#     'time': ,
+#     'score': len(user_word) - time_val + 10
+#     }
 
+#     # print(final_statement)
+#     interpret_results(user_dic)
     
 
-# def interpret_results(user_dict):
+#  def interpret_results(user_dict):
